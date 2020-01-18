@@ -29,14 +29,14 @@
 %       desired criteria.
 %   5.  Adjust Fc and M to meet desired response. M should be minimized as
 %       computationally heavy to have large values of M.
-%
+% 
 %   We are choosing a Kaiser window for easy filter tuning. The Kaiser
 %   window is calculated in 1.2 through a function call to kaiserLPF. The
 %   intent here is to use two Kaiser bandpass filters of different alpha
 %   parameters to first maximize stopband attenuation, and then use a
 %   narrow transition to clean up the signal. Then we will choose alpha1 =
 %   7 for a large attenuation, and then alpha2 = 0, for a sharp transition.
-%
+% 
 %   For the filter parameter M should allow for the smallest possible
 %   transition band. Since the ideal frequency is 466 Hz, and the intent is
 %   to use a shifted low-pass filter, the cut-off frequency should be as
